@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.core import serializers
 
 # Create your views here.
+def show(request):
+    return render(request,"mywatchlist.html")
 def show_mywatchlist(request):
     data_watchlist_item = MyWatchList.objects.all()
     context = {
@@ -19,4 +21,6 @@ def show_xml(request):
 def show_json(request):
     data = MyWatchList.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+
 

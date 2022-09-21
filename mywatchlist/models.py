@@ -8,3 +8,4 @@ class MyWatchList(models.Model):
     rating = models.FloatField()
     release_date = models.TextField()
     review = models.TextField()
+
