@@ -1,12 +1,12 @@
 
 from django.test import TestCase, Client
-<<<<<<< HEAD
-from django.test import TestCase
-=======
 
 from django.test import TestCase
 
->>>>>>> 34a3e2dbb6856bb1ad9f828ff957b6239ab9172d
+
+from django.test import TestCase
+
+
 from django.urls import resolve
 from .views import show_katalog
 # Create your tests here.
