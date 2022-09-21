@@ -2,6 +2,8 @@
 
 https://pbp-assignment-2-matthew.herokuapp.com/
 
+Catalog website: https://pbp-assignment-2-matthew.herokuapp.com/katalog/
+
 ## MVT of the Django app
 
 <img width="311" alt="image" src="https://user-images.githubusercontent.com/112454126/190206352-05510c53-3b6e-4c36-845d-576deaf941a4.png">
