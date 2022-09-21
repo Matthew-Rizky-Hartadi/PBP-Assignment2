@@ -7,6 +7,6 @@ def show_katalog(request):
         'name': 'Matthew Rizky Hartadi',
         'student_id': 2106720941,
         'katalog_list': katalog_item 
-    }
+    } 
 
     return render(request, 'katalog.html', context)

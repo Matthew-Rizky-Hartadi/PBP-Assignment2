@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'example_app',
     'katalog',
     'mywatchlist',
-]
+] 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

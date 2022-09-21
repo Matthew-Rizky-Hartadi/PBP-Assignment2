@@ -26,7 +26,7 @@
         "pk" : 3,
         "fields":{
            "watched": "watched",
-            "title": "TTopgun: Maverick",
+            "title": "Topgun: Maverick",
             "rating": "5",
             "release_date": "May 27, 2022",
             "review": " Topgun: Maverick is a sequel to the Topgun movie in 1986. It follows Pete 'Maverick' Mitchell who needs to train a group of Topgun pilots to do a dangerous mission. The film keeps you at the edge of your seat as it contains a lot of tense moments in the jet fighting scenes."
@@ -47,11 +47,11 @@
         "model" : "mywatchlist.mywatchlist",
         "pk" : 5,
         "fields":{
-           "watched": "watched",
-            "title": "Thor: Love and Thunder",
-            "rating": "4",
-            "release_date": "July 6, 2022",
-            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+           "watched": "not watched",
+            "title": "Minions: The Rise of Gru",
+            "rating": "4.2",
+            "release_date": "June 28, 2022",
+            "review": "Minios: The Rise of Gru tells the story of the minions from the Despicable Me franchise. It shows how the minions follow Gru (the main character) who dreams to become a supervillain. the film contains a lot of comedy and is family friendly, which makes it a great movie"
         }
     },
     {
@@ -62,51 +62,51 @@
             "title": "Incantation",
             "rating": "4.8",
             "release_date": "March 18, 2022",
-            "review": ""
+            "review": "This film follows the genre of found footage and horror. The way that this film is shot really makes the viewers feel that they are in the movie. THe POV style shoot really emphasizes the situation and the creepines of the film. "
         }
     },
     {
         "model" : "mywatchlist.mywatchlist",
-        "pk" : 1,
+        "pk" : 7,
         "fields":{
-           "watched": "watched",
-            "title": "Thor: Love and Thunder",
-            "rating": "4",
-            "release_date": "July 6, 2022",
-            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+           "watched": "not watched",
+            "title": "The Sea Beast",
+            "rating": "4.5",
+            "release_date": "June 24, 2022",
+            "review": "The movie tells the story of a young orphan firl who joins a group of sea monster hunters on their search for the elusive Red Bluster."
         }
     },
     {
         "model" : "mywatchlist.mywatchlist",
-        "pk" : 1,
+        "pk" : 8,
         "fields":{
-           "watched": "watched",
-            "title": "Thor: Love and Thunder",
-            "rating": "4",
-            "release_date": "July 6, 2022",
-            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+           "watched": "not watched",
+            "title": "The Gray Man",
+            "rating": "4.6",
+            "release_date": "February 17, 2022",
+            "review": "The movie is produced by the Russo brothers company. It focues on the CIA Agent “Sierra Six”, who is on the run from sociopathic ex-CIA Agent and mercenary Lloyd Hansen upon discovering corrupt secrets about his superior."
         }
     },
     {
         "model" : "mywatchlist.mywatchlist",
-        "pk" : 1,
+        "pk" : 9,
         "fields":{
            "watched": "watched",
-            "title": "Thor: Love and Thunder",
-            "rating": "4",
-            "release_date": "July 6, 2022",
-            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+            "title": "Love, Rosie",
+            "rating": "4.8",
+            "release_date": "October 22, 2014",
+            "review": " The movie tells the story of Rosie and Alex. Rosie and Alex have been friends since childhood and cannot imagine themselves as a couple. However, when they head in different directions, they realise that they are made for each other. It makes the viewers feel different kinds of emotions with the plot"
         }
     },
     {
         "model" : "mywatchlist.mywatchlist",
-        "pk" : 1,
+        "pk" : 10,
         "fields":{
            "watched": "watched",
-            "title": "Thor: Love and Thunder",
-            "rating": "4",
-            "release_date": "July 6, 2022",
-            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+            "title": "The Adam Project",
+            "rating": "4.6",
+            "release_date": "march 9, 2022",
+            "review": " The Adam Project is about a pilot who travels back in time and encounters his younger self whom he has to work together to defeat an enemy. The story itself is quite intersting as it contains time travel and it is fun seeing the main character (Ryan Reynolds) interact with his younger self (Walker Sobell)"
         }
     }
     
