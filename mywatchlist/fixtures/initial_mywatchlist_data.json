@@ -1,0 +1,113 @@
+[
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 1,
+        "fields":{
+           "watched": "watched",
+            "title": "Thor: Love and Thunder",
+            "rating": "3.5",
+            "release_date": "July 6, 2022",
+            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was good."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 2,
+        "fields":{
+           "watched": "watched",
+            "title": "Everything Everywhre All At Once",
+            "rating": "5",
+            "release_date": "June 22, 2022",
+            "review": "The movie was quite unique. It has an interesting storyline which brings the audience for a ride. All of the emotions were felt when watching this moview which makes this a great movie. "
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 3,
+        "fields":{
+           "watched": "watched",
+            "title": "TTopgun: Maverick",
+            "rating": "5",
+            "release_date": "May 27, 2022",
+            "review": " Topgun: Maverick is a sequel to the Topgun movie in 1986. It follows Pete 'Maverick' Mitchell who needs to train a group of Topgun pilots to do a dangerous mission. The film keeps you at the edge of your seat as it contains a lot of tense moments in the jet fighting scenes."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 4,
+        "fields":{
+           "watched": "watched",
+            "title": "Avengers: Endgame",
+            "rating": "5",
+            "release_date": "April 24, 2019",
+            "review": " The movie was a conclusion of Marvel's 10 year build up with movies on the characters. It the fourth film of the Avengers film franchise which continued directly from the third film. The movie was great as it puts all of the stories well and doesn't make any character left out."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 5,
+        "fields":{
+           "watched": "watched",
+            "title": "Thor: Love and Thunder",
+            "rating": "4",
+            "release_date": "July 6, 2022",
+            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 6,
+        "fields":{
+           "watched": "watched",
+            "title": "Incantation",
+            "rating": "4.8",
+            "release_date": "March 18, 2022",
+            "review": ""
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 1,
+        "fields":{
+           "watched": "watched",
+            "title": "Thor: Love and Thunder",
+            "rating": "4",
+            "release_date": "July 6, 2022",
+            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 1,
+        "fields":{
+           "watched": "watched",
+            "title": "Thor: Love and Thunder",
+            "rating": "4",
+            "release_date": "July 6, 2022",
+            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 1,
+        "fields":{
+           "watched": "watched",
+            "title": "Thor: Love and Thunder",
+            "rating": "4",
+            "release_date": "July 6, 2022",
+            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+        }
+    },
+    {
+        "model" : "mywatchlist.mywatchlist",
+        "pk" : 1,
+        "fields":{
+           "watched": "watched",
+            "title": "Thor: Love and Thunder",
+            "rating": "4",
+            "release_date": "July 6, 2022",
+            "review": " The movie was the fourth film of the Thor franchise. Compared to previous Thor movies, this movie contains a lot of humour which may have thrown away Thor's image of being a serious character. Overall, the movie was quite great."
+        }
+    }
+    
+]
