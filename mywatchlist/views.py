@@ -8,9 +8,19 @@ def show(request):
     return render(request,"mywatchlist.html")
 def show_mywatchlist(request):
     data_watchlist_item = MyWatchList.objects.all()
+    watched = 0
+    notwatched = 0
+    for item in data_watchlist_item:
+        if item.watched:
+            watched += 1
+        else:
+            notwatched += 1
+
     context = {
         'list_item': data_watchlist_item,
-        'name' : 'Matthew Rizky Hartadi'
+        'name' : 'Matthew Rizky Hartadi',
+        'x': watched,
+        'y': notwatched
     }
     return render(request, "mywatchlist.html", context)
 
