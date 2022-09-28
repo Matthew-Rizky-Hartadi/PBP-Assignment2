@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block meta %}
+<title>Login</title>
+{% endblock meta %}
+
+{% block content %}
+
+<div class="create-task">
+    <h1>Add a New Task</h1>
+    <form method="POST"action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Title: </td>
+                <td><input type="text" name="title" placeholder="Title" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <td>Description: </td>
+                <td><input type="text" name="description" placeholder="Description" class="form-control"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input class="btn login_btn" type="submit" value="Add"></td>
+            </tr>
+        </table>
+
+    </form>
+
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+        </ul>
+    {% endif %}
+
+    <br>
+    <p>To go back to the list, click<a href="{% url 'todolist:show_todolist' %}"> here</a></p>
+
+</div>
+
+{% endblock content %}
