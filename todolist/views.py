@@ -74,7 +74,7 @@ def create_task(request):
 @login_required(login_url='/todolist/login/')
 def finish_task(request, id):
     item = Task.objects.get(user = request.user, id=id)
-    item.is_done = not item.is_done
+    item.is_finished = not item.is_finished
     item.save()
     return redirect('todolist:show_todolist')
 
