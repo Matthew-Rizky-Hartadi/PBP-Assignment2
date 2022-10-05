@@ -1,0 +1,123 @@
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.create_task {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    /* width: auto; */
+    justify-content: center;
+    align-content: center;
+    /* top: 50%; */
+    color: white;
+    background: rgb(10,10,10);
+    background: linear-gradient(175deg, rgba(10,10,10,1) 0%, rgba(65,84,89,1) 52%, rgba(90,93,96,1) 97%);
+    padding: 150px;
+    
+}
+
+.create_task_1 {
+    padding: 40px;
+    color: white;
+    /* background: rgba(128, 110, 110, 0.2); */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 5;
+    font-family: "Optima", sans-serif;
+}
+
+.input {
+    border-radius: 20px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-family: "Optima", sans-serif;
+}
+
+.btn_input {
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+form {
+    height: 25vh;
+}
+
+.form-control {
+    border-radius: 6.375rem;
+    padding-bottom:1.5vh;
+    margin-bottom: 1.5vh;
+    background:none;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    transition: all 0.2s;
+    color: white;
+}
+
+.form-control:focus {
+    background:none;
+    border: 2px solid rgb(50, 214, 50);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: rgb(136, 136, 136);
+}
+
+.btn_1 {
+    background-color: white;
+    border: 1px solid white;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+    margin: 1em 1em 1em 0;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    border-radius: 6.375rem;
+    background:none;
+    color: white;
+}
+
+.btn_1:hover {
+    background-color:rgba(65,84,89,1);
+    color: rgb(35, 174, 58);
+    border: 1px solid rgb(35, 174, 58);
+    padding: 0.3em 1em 0.3em 1em;
+}
+
+a {
+    color: white;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color: blue;
+}
+
+td {
+    padding-right: 0.2em;
+    padding-bottom:1.5vh;
+    display:flex;
+    justify-content:center;
+}
+
+tr {
+    margin-bottom:2.5vh;
+    display:flex;
+    justify-content:center;
+}

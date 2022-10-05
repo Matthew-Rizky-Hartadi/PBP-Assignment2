@@ -1,0 +1,165 @@
+    html,
+    body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    }
+
+.login_container {
+    display: flex;
+    /* height: 100%; */
+    /* width: 100%; */
+    top: 50%;
+    width: auto;
+    justify-content: center;
+    align-content: center;
+    /* top: 50%; */
+    color: white;
+    background: rgb(10,10,10);
+    background: linear-gradient(175deg, rgba(10,10,10,1) 0%, rgba(65,84,89,1) 52%, rgba(90,93,96,1) 97%);
+    padding: 50px 150px 150px 150px;
+    
+}
+
+.login_1 {
+    padding: 40px;
+    color: white;
+    /* background: rgba(128, 110, 110, 0.2); */
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index: 5;
+    font-family: "Optima", sans-serif;
+}
+
+.form-control {
+    border-radius: 6.375rem;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+label {
+    text-decoration: none;
+}
+
+.btn_1 {
+    background-color: white;
+    border: 1px solid white;
+    padding: 0.3em 0.8em 0.3em 0.8em;
+    margin: 1em 1em 1em 0;
+    /* text-transform: uppercase; */
+    transition: 0.5s;
+    border-radius: 6.375rem;
+    background:none;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    transition: all 0.4s;
+    color: white;
+}
+
+.btn_1:hover {
+    background-color:rgba(65,84,89,1);
+    color: rgb(35, 174, 58);
+    border: 1px solid rgb(35, 174, 58);
+    padding: 0.3em 1em 0.3em 1em;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border-radius: 5px;
+    border-radius: 6.375rem;
+    padding-bottom:1.5vh;
+    margin-bottom: 1.5vh;
+    background:none;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+    transition: all 0.4s;
+    color: white;
+    padding-top: 5px;
+}
+
+input:focus  {
+    color:white;
+}
+
+th {
+    /* padding: 2em; */
+    padding: 0em 0.5em 0em 0em;
+    display:flex;
+    align-content:flex-start;
+}
+
+a {
+    color: white;
+    transition: all 0.5s;
+}
+
+a:hover {
+    color: blue;
+}
+
+form {
+    height: 75vh;
+}
+
+.drop {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background: #54ABFB;
+    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+    opacity: 0.8;
+    border: 2px solid #3d93ff;
+  }
+  
+  .drop::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #318CFE;
+    border-radius: 51% 49% 48% 52% / 62% 44% 56% 38%;
+    box-shadow: -20px 30px 16px #1B6CFB, -40px 60px 32px #1b6cfb, inset -6px 6px 10px #1B6CFB, inset 2px 6px 10px #1a74e5, inset 20px -20px 22px white, inset 40px -40px 44px #a8ceff;
+  }
+  
+  .drop::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: #E6FDFB;
+    border-radius: 44% 56% 46% 54% / 36% 50% 50% 64%;
+    left: 130px;
+    top: 40px;
+    box-shadow: 16px 40px 0 -10px white;
+    opacity: 0.8;
+  }
+  
+  .drop1 {
+    left: 15vw;
+    top: 60vh;
+  }
+  
+  .drop2 {
+    right: 20vw;
+    top: 10vh;
+    z-index: 1;
+    border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+  }
+  
+  .drop2::before {
+    border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
+  }

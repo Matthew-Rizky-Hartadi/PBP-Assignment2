@@ -1,0 +1,226 @@
+body {
+    min-height: 100vh;
+    background: #212534;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+    /* background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* background: rgb(10,10,10); */
+    /* background: linear-gradient(175deg, rgba(10,10,10,1) 0%, rgba(25,28,41,1) 37%, rgba(90,93,96,1) 97%); */
+    background: rgb(10,10,10);
+    background: linear-gradient(175deg, rgba(10,10,10,1) 0%, rgba(65,84,89,1) 52%, rgba(90,93,96,1) 97%);
+}
+
+  
+:root {
+    --card-height: 65vh;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+h1 {
+    color:white;
+}
+
+.card, .card_add, .add_task_text {
+    background: #191c29;
+    border: 1px solid rgb( #5ddcff, #3c67e3 43%, #4e00c2);
+    margin: 1em 0em;
+    width: var(--card-width);
+    height: var(--card-height);
+    /* padding: 3px; */
+    padding-left:1vw;
+    padding-right: 1vw;
+    position: relative;
+    border-radius: 6px;
+    /* justify-content: center;
+    align-items: center;
+    text-align: center; */
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 100%);
+    cursor: pointer;
+    font-family: corbel;
+    transition: 0.5s ease;
+    background: rgba( 79, 123, 167, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.add_task_text {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    /* color: rgb(88 199 250 / 100%); */
+    /* transition: color 1s; */
+    transform: scale(1.1);
+    background: none;
+}
+.card:hover:before, .card:hover:after {
+    /* animation: none; */
+    background-color: none;
+    opacity: 0;
+}
+  
+  
+.card::before {
+    content: "";
+    width: 104%; 
+    height: 102%;
+    border-radius: 8px;
+    
+    /* background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2); */
+      position: absolute;
+      z-index: -1;
+      top: -1%;
+      left: -2%;
+      /* animation: spin 2.5s linear infinite; */
+}
+  
+.card::after {
+    position: absolute;
+    /* content: ""; */
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+        #191c29);
+      opacity: 1;
+    transition: opacity .5s;
+    /* animation: spin 2.5s linear infinite; */
+}
+  
+@keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+}
+  
+a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+table {
+    color: white;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 2em;
+}
+
+.date {
+    height: 10%;
+    font-size: 0.5em; 
+    padding-top: 0.2em;   
+}
+
+.title {
+    height: 10%;
+    border-bottom: 1px solid rgb(88 199 250);
+}
+
+.description {
+    height: 80%;
+    padding-top: 2vh;
+    font-size: 0.8em;
+}
+
+.action {
+    display:flex;
+    justify-content: space-evenly;
+}
+
+input {
+    transform: scale(2);
+}
+
+button {
+    border-radius: 0.3em;
+    background:none;
+    transition: 0.4s ease;
+}
+
+button:hover {
+    background:rgb(40, 40, 40);
+    border: 1px solid rgb(40, 40, 40);
+}
+
+a {
+    color: white;
+    transition: 0.4s ease;
+}
+
+a:hover {
+    color: red;
+}
+
+.add_task {
+    background: none;
+}
+
+.add_task:hover {
+    background: none;
+}
+
+.add_task_text {
+    margin:0;
+    font-size: 2em;
+}
+
+.add_task_text:hover {
+    color: greenyellow;
+}
+
+.logout {
+    height: 15vh;
+    width: 20vw;
+}
+
+.logout_text {
+    font-size: 3em;
+    padding: 0.5em;
+    border: 3px solid black;
+    border-radius: 0.3em;
+}
+
+.logout_text:hover {
+    background: rgb(40, 40, 40);
+    border: 3px solid rgb(40, 40, 40);
+    color: blue;
+}
