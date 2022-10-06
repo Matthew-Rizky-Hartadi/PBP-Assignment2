@@ -16,13 +16,13 @@ body {
     /* top: 50%; */
     color: white;
     background: rgb(10,10,10);
-    background: linear-gradient(175deg, rgba(10,10,10,1) 0%, rgba(65,84,89,1) 52%, rgba(90,93,96,1) 97%);
-    padding: 150px;
+    background: linear-gradient(157deg, rgb(41 36 36) 0%, rgba(65,84,89,1) 52%, rgb(195 202 208) 97%);
+    padding: 15vw;
     
 }
 
 .login_1 {
-    padding: 40px;
+    padding: 7vh;
     color: white;
     /* background: rgba(128, 110, 110, 0.2); */
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -122,6 +122,10 @@ tr {
     justify-content:center;
 }
 
+p {
+    margin-top: 2rem
+}
+
 .drop {
     position: absolute;
     height: 200px;
@@ -171,8 +175,4 @@ tr {
     border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
   }
 
-  @media only screen and (max-width: 1200px) {
-    p {
-        margin-bottom: 5vh;
-    }
-  }
+  

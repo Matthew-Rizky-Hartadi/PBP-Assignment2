@@ -163,3 +163,10 @@ form {
   .drop2::before {
     border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
   }
+
+
+@media only screen and (max-width: 600px) {
+    ul {
+        visibility:hidden;
+    }
+}
