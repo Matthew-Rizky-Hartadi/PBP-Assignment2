@@ -4,39 +4,65 @@ https://pbp-assignment-2-matthew.herokuapp.com/
 
 To Do List website: https://pbp-assignment-2-matthew.herokuapp.com/todolist/
 
-## CSRF Token
+## CSS
 
-When making a form in a django application, inside the form element there is usually a CSRF token. What is a CSRF Token? It is a secret, unique and unpredictable value a server-side application generates in order to protect CSRF vulnerable resources. You can achieve this by using a cryptographic strength pseudo-random number generator (PRNG), seeded with the timestamp when it was created and a static secret. This presents an additional obstacle to a malicious user who attempts to analyze the tokens based on a sample that is issued to him.
+CSS can be divided into three types, namely inline, internalA, and external CSS. These types are differentiated based on the position of the CSS code. Inline CSS would have the CSS code inside of the HTML tag. Internal CSS would have the CSS code in a style tag in the HTML file (<style></style>). Lastly, external CSS would create a new CSS file, and then linked to the HTML file from the link tag. Each type has its pros and cons. You can easily and quickly insert CSS rules to an HTML page with inline CSS. That’s why this method is useful for testing or previewing the changes, and performing quick-fixes to your website, but, Adding CSS rules to every HTML element is time-consuming and makes your HTML structure messy. With internal CSS, since you’ll only add the code within the same HTML file, you don’t need to upload multiple files, however, it would increase the page's size and loading time. For external CSS, since the CSS code is in a separate document, your HTML files will have a cleaner structure and are smaller in size. But, Your pages may not be rendered correctly until the external CSS is loaded.
 
-If there is no CSRF Token in the form, it allows the possibility of a malicious user or website to make an unsuspecting user perform an action on your site which they didn't want to happen. An example would be an external site could craft a form which POSTs your site and perform unwanted action. If a site has a shopping cart which dousn;t use CSRF tokens, a malicious site could create a form with a button saying register but actually does something else.
+## HTML5 Tag
 
-## Form as Table
+a = defines a hyperlink
 
-Generally when making a form in a django application, you would use {{ form.as_table }}. This will render the form created in django as a table. However, it is possible to create a form without {{ form.as_table }}. To display the form you have to first make it inside the table tag to render it as a table. If you want to make it manually, you can iterate over the form fields in the html rather than using as_table. Another way of doing it is to refer to the form fields one by one. Manually creating the form will allow the developer to have more freedom in styling the table form. One method is to implement Bootstrap css to the elements of the form.
+b = displays text in bold style
 
-## Data Flow
+body = defines the document's body
 
-<img width="239" alt="image" src="https://user-images.githubusercontent.com/112454126/192823758-1e48cc03-e03e-4c83-b83c-92b697806614.png">
+br = produces single line break
 
-<img width="477" alt="image" src="https://user-images.githubusercontent.com/112454126/192823895-547425f2-bf20-4046-a33b-70afb6e64378.png">
+button = creates a clickable button
 
-From the form provided in the HTML form, the user would be able to  create a new title and description for the to do list. 
+div = specifies a division or section
 
-<img width="501" alt="image" src="https://user-images.githubusercontent.com/112454126/192824532-993b970c-ab33-45a9-8ece-9b7a5952f490.png">
+footer = represents the footer of the document
 
-After the user clicks Add, the function in views.py to create task would check if the method of the request is POST (which in this case it is). It would then get the content of each inside the title and description input to check. If both of the content exists, it will create an object to the Task database based on the Task model according to the retrieved information and also the date. Then, it will redirect the user to the to do list page. 
+form = defines an HTML form for user input
 
-<img width="334" alt="image" src="https://user-images.githubusercontent.com/112454126/192826856-83a05f0d-ceb2-4791-bd59-da22ac703445.png">
+header = represents the header of a document
 
-In the show_todolist function, it will retrieve the items form the Task objects that have been made based on if the user is request.user. It will then return the context of it to the todolist.html.
+h1 - h6 = defines HTML headings
 
-<img width="285" alt="image" src="https://user-images.githubusercontent.com/112454126/192827279-0d3c67b9-064c-4270-beb4-6e8b63738922.png">
+html = efines the root of an HTML document
 
-The code in the html file would then iterate the list_item variable that contains the objects that have been retrieved from the show_todolist function in views.py and display the data that have saved in the database to the user.
+img = represents an image
 
-<img width="470" alt="image" src="https://user-images.githubusercontent.com/112454126/192827566-4cf8d243-42fa-42fd-a293-f1d42a3e2d22.png">
+input = defines an input control
 
+li = defines a list item
 
+link = defines the relationship between the current document and an external resource
+
+and many more.
+
+## CSS selectors
+
+:active = selects an active link
+
+::after = insert something after the content of each <p> element
+  
+::before = insert something before the content of each <p> element
+
+:checked = selects every checked input element
+
+:focus = selects the input element which has focus
+   
+:hover = selects links on mouse over
+ 
+:link = selects all unvisited links
+
+:nth-child(n) = selects every <p> element that is the second child of its parent
+
+:valid = selects all input elements with a valid value
+   
+and many more. 
 
 ## Implementation
 
