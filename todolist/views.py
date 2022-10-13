@@ -11,6 +11,7 @@ from django.core import serializers
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse, JsonResponse
 
 # Create your views here.
 @login_required(login_url='/todolist/login/')
@@ -76,10 +77,62 @@ def finish_task(request, id):
     item = Task.objects.get(user = request.user, id=id)
     item.is_finished = not item.is_finished
     item.save()
+    return JsonResponse(
+            {
+                "pk": item.id,
+                "fields": {
+                    "title": item.title,
+                    "description": item.description,
+                    "is_finished": item.is_finished,
+                    "date": item.date,
+                },
+            },
+            status=200,
+        )
     return redirect('todolist:show_todolist')
 
 @login_required(login_url='/todolist/login/')
 def delete_task(request, id):
     item = Task.objects.get(user = request.user, id=id)
     item.delete()
+    return JsonResponse(
+            {
+                "pk": item.id,
+                "fields": {
+                    "title": item.title,
+                    "description": item.description,
+                    "is_finished": item.is_finished,
+                    "date": item.date,
+                },
+            },
+            status=200,
+        )
     return redirect('todolist:show_todolist')
+
+@login_required(login_url="/todolist/login/")
+def show_json(request):
+    data = Task.objects.filter(user=request.user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def add_task(request):
+    if request.method == "POST":
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+        task = Task.objects.create(
+            user=request.user,
+            title=title,
+            description=description,
+            date=datetime.datetime.today(),
+        )
+        return JsonResponse(
+            {
+                "pk": task.id,
+                "fields": {
+                    "title": task.title,
+                    "description": task.description,
+                    "is_finished": task.is_finished,
+                    "date": task.date,
+                },
+            },
+            status=200,
+        )

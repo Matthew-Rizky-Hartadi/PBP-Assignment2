@@ -13,7 +13,7 @@
     <div class="cards">
         <a href="{%url 'todolist:create_task'%}" class="add_task_text">Add task</a> 
          
-        {% for item in list_item %}
+        <!-- {% for item in list_item %}
             <div class="card">
                 <div class="date">
                     {{item.date}}
@@ -34,9 +34,9 @@
                     </div>
                     <div class="check">
                         {% if item.is_finished %}
-                        <input type="checkbox"" onclick=" location.href=`{% url 'todolist:finish_task_id' item.id %}`" checked>
+                        <input class="input_1" type="checkbox"" onclick=" location.href=`{% url 'todolist:finish_task_id' item.id %}`" checked>
                         {% else %}
-                        <input type="checkbox"" onclick=" location.href=`{% url 'todolist:finish_task_id' item.id %}`">
+                        <input class="input_1" type="checkbox"" onclick=" location.href=`{% url 'todolist:finish_task_id' item.id %}`">
                         {% endif %}
                     </div>
                     <div class="delete">
@@ -45,20 +45,176 @@
                 </div>
                 
             </div>
-        {% endfor %}
+        {% endfor %} -->
+        
         
             
                 
            
         
     </div>
+    <div class="buttons">
+        <a href="{% url 'todolist:logout' %}" class="logout_text">Logout</a>
+        <button id="create-task">Add Task</button>
+    </div>
+    <div class="modal">
+        
+        <div class="create_task_1">
+            <h1>Add Task</h1>
+            <form method="POST"action="" id="create-task-form">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <input type="text" name="title" placeholder="Title" class="form-control" id="title">
+                    </tr>
+    
+                    <tr>
+                        
+                        <input type="text" name="description" placeholder="Description" class="form-control" id="description">
+                    </tr>
+    
+                    <tr>
+                        <div class="btn_input"><input class="btn_1" type="submit" value="Add"></div>
+                    </tr>
+                </table>
+    
+            </form>
+
+            <a href="{% url 'todolist:show_todolist' %}" id="close-modal">Close</a>
+        </div>
+    </div>
+    
 </div>
 
 <br>
 
-<div class="buttons">
-    <a href="{% url 'todolist:logout' %}" class="logout_text">Logout</a>
-</div>
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+        const card = item => `<div class="card">
+                <div class="date">
+                    ${item.fields.date}
+                </div>
+                <div class="title">
+                    ${item.fields.title}
+                </div>
+                <div class="description">
+                    ${item.fields.description}
+                </div>
+                <div class="action">
+                    <div class="info">
+                        
+                        <p style="color:greenyellow">Done</p>
+                        
+                        <p style="color:white">Pending</p>
+                        
+                    </div>
+                    <div class="check">
+                        
+                        <input class="input_1" type="checkbox"" onclick=" location.href='finish_task/${item.pk}' checked>
+                        
+                        <input class="input_1" type="checkbox"" onclick=" location.href='finish_task/${item.pk}' ">
+                        
+                    </div>
+                    <div class="delete">
+                        <button id="delete-${item.pk}"><a href="delete_task/${item.pk}">Delete</a></button>
+                    </div>
+                </div>
+                
+                
+            </div>`
+        
+        const renderItem = () => {
+            $.get("{% url 'todolist:show_json' %}", data => {
+                $.each(data, (i, value) => {
+                    $(".cards").append(card(value));
+
+                    $(`#delete-${value.pk}`).click(() => {
+                        deleteTask(value.pk);
+                    });
+
+                })
+            })
+        }
+
+
+        const updateFinish = id => {
+            const csrftoken = document.querySelector(
+                "[name=csrfmiddlewaretoken]"
+            ).value;
+
+            $.ajax({
+                url: "{% url 'todolist:finish_task_id' 0 %}".replace("0", id),
+                type: "PUT",
+                headers: { "X-CSRFToken": csrftoken }, // give CSRF token to the header
+                mode: "same-origin", // Do not send CSRF token to another domain.
+                success: response => {
+                // refresh
+                $(".cards").empty();
+                renderTasks();
+                },
+                error: error => {
+                console.log(error);
+                },
+            });
+            
+        };
+
+        const openModal = e => {
+            e.preventDefault();
+            $(".modal").removeClass("hidden");
+            $(".modal").css("display", "block")
+        };
+
+        const closeModal = e => {
+            $('.modal').addClass("hidden");
+            $(".modal").css("display", "none")
+        };
+
+        $("#create-task-form").submit(e => {
+            e.preventDefault();
+
+            const csrftoken = document.querySelector(
+                "[name=csrfmiddlewaretoken]"
+            ).value;
+
+            const title = $("#title").val();
+            const description = $("#description").val()
+
+            if (title && description) {
+                $.ajax({
+                    type:"POST",
+                    url: "{% url 'todolist:add_task' %}",
+                    headers: { "X-CSRFToken": csrftoken },
+                    mode: "same-origin",
+                    data: {
+                        title: title,
+                        description: description,
+                    },
+                    success: response => {
+                        $("#create-task-form").trigger("reset");
+                        closeModal();
+                        $(".cards").append(card(response));
+                    },
+                    error: error => {
+                        console.log(error);
+                    },
+                });
+            } else {
+                alert("Please fill all the fields");
+            }
+        });
+
+        $("#create-task").click(openModal);
+        $("#close-modal").click(closeModal);
+
+        renderItem();
+
+    });
+
+
+</script>
 
 {% endblock content %}

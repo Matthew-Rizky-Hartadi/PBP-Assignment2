@@ -17,7 +17,7 @@ body {
     color: white;
     background: rgb(10,10,10);
     background: linear-gradient(157deg, rgb(41 36 36) 0%, rgba(65,84,89,1) 52%, rgb(195 202 208) 97%);
-    padding: 15vw;
+    padding: 50px;
     
 }
 
@@ -32,6 +32,7 @@ body {
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 5;
     font-family: "Optima", sans-serif;
+    height: fit-content;
 }
 
 .input {
@@ -89,7 +90,7 @@ form {
     backdrop-filter: blur( 12px );
     -webkit-backdrop-filter: blur( 12px );
     border-radius: 6.375rem;
-    background:none;
+    background:#1B6CFB;
     color: white;
 }
 

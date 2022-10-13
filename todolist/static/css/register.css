@@ -32,6 +32,7 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 5;
     font-family: "Optima", sans-serif;
+    font-size: 2vh;
 }
 
 .form-control {
@@ -165,8 +166,17 @@ form {
   }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
     ul {
         visibility:hidden;
+    }
+    .helptext {
+        visibility:hidden;
+    }
+    td {
+        height: auto;
+    }
+    tr {
+        height: fit-content
     }
 }
